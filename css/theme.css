@@ -1,0 +1,1151 @@
+@charset "UTF-8";
+/* Theme Name: Fleurs d'orangers et chats errants - Oscars Short
+ * Theme URI: https://www.koukaki.local
+ * Author: Studio Koukaki
+ * Author URI: https://www.koukaki.local
+ * Template: foce
+ * Description: Thème enfant à l'occasion de la nomination aux Oscars Shorts
+ * Version: 0.1
+ * */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes move_big_cloud {
+  from {
+    right: -20rem;
+  }
+  to {
+    right: 15rem;
+  }
+}
+@keyframes move_little_cloud {
+  from {
+    right: -15rem;
+  }
+  to {
+    right: 25rem;
+  }
+}
+@keyframes fadein_banner {
+  from {
+    opacity: 0;
+    top: -15rem;
+  }
+  to {
+    opacity: 1;
+    top: 0rem;
+  }
+}
+@keyframes fadein_banner_img {
+  from {
+    opacity: 0;
+    top: 25rem;
+  }
+  to {
+    opacity: 1;
+    top: 0rem;
+  }
+}
+@keyframes apparition_titre {
+  from {
+    opacity: 0;
+    top: 10rem;
+  }
+  to {
+    opacity: 1;
+    top: 0rem;
+  }
+}
+@keyframes remonte_titre {
+  from {
+    color: rgba(255, 245, 233, 0);
+    top: 0rem;
+  }
+  to {
+    color: rgb(255, 245, 233);
+    top: -6.6rem;
+  }
+}
+@keyframes descend_titre {
+  from {
+    color: rgb(255, 245, 233);
+    top: -6.6rem;
+  }
+  to {
+    color: rgba(255, 245, 233, 0);
+    top: 0rem;
+  }
+}
+@keyframes bulle {
+  0% {
+    top: 0rem;
+    left: 0rem;
+    transform: scale(1, 1) rotate(0deg);
+  }
+  25% {
+    top: 3rem;
+    left: 2rem;
+    transform: scale(1.02, 0.98) rotate(-0.2deg);
+  }
+  50% {
+    top: -3rem;
+    left: -0.4rem;
+    transform: scale(0.95, 1.05) rotate(0.8deg);
+  }
+  75% {
+    top: 3.1rem;
+    left: 1rem;
+    transform: scale(1.03, 0.97) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    top: -2.95rem;
+    left: -2rem;
+    transform: scale(0.97, 1.03) rotate(-0.7deg);
+  }
+}
+@keyframes flottement_Orenjiiro {
+  0% {
+    bottom: 50px;
+    left: 100px;
+  }
+  50% {
+    bottom: 20px;
+    left: 150px;
+  }
+  100% {
+    bottom: 40px;
+    left: 100px;
+  }
+}
+@keyframes flottement_Kawaneko {
+  0% {
+    top: 200px;
+    left: 300px;
+  }
+  50% {
+    top: 150px;
+    left: 310px;
+  }
+  100% {
+    top: 205px;
+    left: 290px;
+  }
+}
+@keyframes flottement_Jaakuna {
+  0% {
+    top: 450px;
+    right: 200px;
+  }
+  50% {
+    top: 470px;
+    right: 195px;
+  }
+  100% {
+    top: 400px;
+    right: 205px;
+  }
+}
+@keyframes affiche_video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform-origin: center -50px;
+    transform: scale(1.08, 0.92);
+  }
+  50% {
+    transform-origin: center 50px;
+    transform: scale(0.92, 1.08);
+  }
+  100% {
+    transform-origin: center -50px;
+    transform: scale(1.07, 0.93);
+  }
+}
+@keyframes pulse-2 {
+  0% {
+    transform-origin: center -30px;
+    transform: scale(1.02, 0.98);
+  }
+  50% {
+    transform-origin: center 50px;
+    transform: scale(0.98, 1.02);
+  }
+  100% {
+    transform-origin: center -20px;
+    transform: scale(1.03, 0.97);
+  }
+}
+@keyframes bulle_titre {
+  0% {
+    top: 3px;
+    transform: scale(1.03, 0.97);
+  }
+  50% {
+    top: -3px;
+    transform: scale(0.97, 1.03);
+  }
+  100% {
+    top: 3px;
+    transform: scale(0.97, 1.03);
+  }
+}
+@keyframes fondu_menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ajustement du header */
+header {
+  background-color: #FFD5A2;
+  min-height: 80px;
+  margin: 0 0 0 0;
+  padding: 20px 20px 15px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.site-header {
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+}
+
+.titre {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  line-height: 26.85px;
+  font-size: 21.48px;
+}
+.titre:hover {
+  animation: bulle_titre 1.5s ease-in-out alternate infinite;
+}
+
+.titre a {
+  text-decoration: none;
+}
+
+.titre a:hover {
+  color: red;
+  line-height: 26.85px;
+  font-size: 21.6px;
+  transition: 0.5s;
+}
+
+/* Sidenav menu */
+.sidenav {
+  opacity: 0;
+  min-width: 100%;
+  height: calc(100vh - 80px);
+  position: absolute;
+  z-index: 1;
+  top: -10000px;
+  background-color: #fff5e9;
+  padding: 0 0 0 0;
+  margin: 0 0 0 5px;
+  transition: top 0.5s ease;
+  text-align: center;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0 auto 0 auto;
+  margin: 0 auto 0 auto;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 95px 0 0 0;
+  margin: 0 auto 0 auto;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  line-height: 26.85px;
+  font-size: 64px;
+  transition: 0.3s;
+}
+
+.sidenav li a:hover {
+  text-shadow: #FF5C00 0 0 10px;
+}
+
+/* Lorsqu'on clique sur l'hamburger */
+.sidenav.active {
+  top: 80px;
+  opacity: 0;
+  animation: fondu_menu ease-in-out 0.8s 0.4s forwards;
+}
+
+/* Permet d'afficher la flèche qui désactive le menu */
+.sidenav .close {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffd5a2;
+  position: absolute;
+  top: -60px;
+  right: 15px;
+  font-size: 50px;
+}
+
+a.close:hover {
+  animation: pulse 1.2s ease-in-out alternate infinite;
+  color: red;
+}
+
+/* gestion graphique du hamburger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+/* Lorsqu'on survol l'îcone hamburger */
+a#openBtn:hover {
+  position: relative;
+  animation: pulse 1.2s ease-in-out alternate infinite;
+}
+
+/* Gestion des images du menu */
+.logo-menu {
+  position: relative;
+  width: 154px;
+  height: 95px;
+  margin: 40px auto 0 auto;
+  filter: drop-shadow(0px 0px 20px rgba(255, 92, 0, 0.6));
+  animation: pulse-2 2.2s ease-in-out alternate infinite;
+}
+
+.pied-menu a {
+  margin: 50px auto 0 auto;
+  color: black;
+  font-size: 15px;
+}
+
+.orchid-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  transform-origin: center center;
+  top: 50px;
+  left: -50px;
+  animation: rotating 10s linear infinite;
+}
+
+.sunflower-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 216px;
+  height: 216px;
+  transform-origin: center center;
+  top: 80px;
+  right: 160px;
+  animation: rotating 10s linear infinite;
+}
+
+.flower-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  transform-origin: center center;
+  top: 500px;
+  left: 200px;
+  animation: rotating 10s linear infinite;
+}
+
+.randomflower-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  transform-origin: center center;
+  top: 400px;
+  right: -40px;
+  animation: rotating 10s linear infinite;
+}
+
+.hibiscus-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  transform-origin: center center;
+  bottom: -300px;
+  right: -300px;
+  animation: rotating 10s linear infinite;
+}
+
+/* gestion des personnages du menu */
+.orenjiiro-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  transform-origin: center center;
+  bottom: 50px;
+  left: 100px;
+  animation: flottement_Orenjiiro 2s 0.8s ease-in-out alternate infinite;
+}
+
+.kawaneko-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  transform-origin: center center;
+  top: 200px;
+  left: 300px;
+  animation: flottement_Kawaneko 2.2s 0.8s ease-in-out alternate infinite;
+}
+
+.jaakuna-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  transform-origin: center center;
+  top: 450px;
+  right: 200px;
+  animation: flottement_Jaakuna 2s 0.8s ease-in-out alternate infinite;
+}
+
+#over {
+  z-index: -1;
+  padding: 0 0 0 0;
+  margin: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  min-width: 100%;
+  height: calc(100vh - 80px);
+}
+
+#oscar {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 12em auto 5em auto;
+}
+
+.en_ligne {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.en_ligne img {
+  margin-top: 30px;
+}
+
+.en_dessous {
+  background-image: url("../images/orange_flou_large.png");
+  width: 50%;
+  min-height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+  padding: 0rem 4.2rem 0em 4.2rem;
+}
+
+.en_dessous p {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.625rem;
+  line-height: 52.5px;
+  color: #FFF5E9;
+  text-align: left;
+}
+
+.site-footer::before {
+  opacity: 0;
+}
+
+.site-footer::after {
+  opacity: 0;
+}
+
+.en_ligne::before {
+  content: url(../images/Sunflower.png);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 4;
+  margin-left: -73em;
+  margin-top: -7em;
+  animation: rotating 10s linear infinite;
+  transform-origin: center center;
+}
+
+.en_ligne::after {
+  content: url(../images/orchid.png);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 3;
+  margin-right: -90em;
+  margin-top: -7em;
+  transform-origin: center center;
+  animation: rotating 10s linear infinite;
+}
+
+.quicksand-normal {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+.story h2::after {
+  width: 155px;
+  height: 155px;
+}
+
+#studio h2::after {
+  width: 109px;
+  height: 109px;
+}
+
+.story__article::after, .story h2::after, .site-footer::before, .site-footer::after, .site-footer ul::after, #studio h2::before, #studio h2::after {
+  animation: rotating 10s linear infinite;
+  transform-origin: center center;
+}
+
+#studio h2::before {
+  left: 20px;
+}
+
+.montagne {
+  content: url(../images/montagne.png);
+  position: absolute;
+  min-width: 1440px;
+  min-height: 699px;
+  filter: blur(1px);
+}
+
+p, h3 {
+  z-index: 3;
+}
+
+.story #place {
+  background-image: url(../images/Studio_Koukaki-image_place.png);
+}
+
+.gros_nuage {
+  width: 316px;
+  height: 122px;
+  content: url(../images/big_cloud.png);
+  position: relative;
+  right: -20rem;
+  top: 5rem;
+  filter: blur(10px);
+}
+
+.petit_nuage {
+  width: 142px;
+  height: 55px;
+  content: url(../images/little_cloud.png);
+  z-index: 0;
+  position: relative;
+  right: -15rem;
+  top: 20rem;
+  filter: blur(10px);
+}
+
+.bouge_petit_nuage {
+  animation: move_little_cloud 5s ease-in-out forwards;
+}
+
+.bouge_gros_nuage {
+  animation: move_big_cloud 5s ease-in-out forwards;
+}
+
+.banner {
+  width: 100%;
+  min-height: 806px;
+  display: flex;
+  opacity: 0;
+  animation: fadein_banner 1.3s 0.5s ease-in-out forwards;
+  position: relative;
+  top: -5rem;
+}
+
+.story {
+  opacity: 0;
+  animation: fadein_banner 1.3s 0.5s ease-in-out forwards;
+  position: relative;
+  top: -5rem;
+  overflow: hidden !important;
+}
+
+#studio {
+  opacity: 0;
+  animation: fadein_banner 1.3s 0.5s ease-in-out forwards;
+  position: relative;
+  top: -5rem;
+  overflow: hidden !important;
+}
+
+.banner > img {
+  opacity: 0;
+  position: relative;
+  top: 10rem;
+  transform-origin: center center;
+  animation: fadein_banner_img 1.3s 0.5s ease-in-out forwards, bulle 4s 3s ease-in-out alternate infinite;
+}
+
+h2 {
+  color: rgba(255, 245, 233, 0);
+  height: 200px;
+}
+
+.titre_interactif {
+  position: relative;
+  color: rgba(255, 245, 233, 0);
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+}
+
+.titre_interactif_apparition {
+  animation: remonte_titre 0.5s linear forwards;
+}
+
+.titre_interactif_disparition {
+  animation: descend_titre 1s ease-in-out backwards;
+}
+
+/* animation du carrousel de personnages */
+.main-character {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  min-width: 150px;
+  height: auto;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.vidcats {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  width: auto;
+  min-height: 806px;
+  background-size: cover;
+  position: absolute;
+  animation: affiche_video 1s 3s forwards;
+}
+
+.banner img {
+  display: flex;
+  margin-top: -10%;
+  width: 50%;
+  z-index: 5;
+}
+
+/* gestion du responsive */
+@media screen and (max-width: 1250px) {
+  body {
+    max-width: 100%;
+  }
+  .banner {
+    max-width: 100%;
+    background-image: url("./assets/images/banner.png");
+    min-height: 50rem;
+  }
+  .vidcats {
+    max-width: 100%;
+    min-height: 200px;
+    padding: 0;
+    margin: 0;
+    top: 0rem;
+  }
+  video {
+    max-width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .banner > img {
+    max-width: 50%;
+    margin-top: -20rem;
+  }
+  .en_ligne::before {
+    margin-left: -65em;
+    margin-top: -7em;
+  }
+  .en_ligne::after {
+    margin-right: -69em;
+    margin-top: -7em;
+  }
+  .en_dessous p {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .sidenav a {
+    padding: 88px 0 0 0;
+    color: black;
+    line-height: 23px;
+    font-size: 50px;
+  }
+  .pied-menu a {
+    margin: 40px auto 0 auto;
+    color: black;
+    font-size: 15px;
+  }
+  .orenjiiro-menu {
+    width: 90px;
+    height: 90px;
+    margin-left: 5rem;
+    margin-top: -20rem;
+  }
+  .kawaneko-menu {
+    width: 100px;
+    height: 100px;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+  .jaakuna-menu {
+    width: 100px;
+    height: 100px;
+    margin-left: 0rem;
+    margin-top: -5rem;
+  }
+  .hibiscus-menu {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -200px;
+  }
+  .sunflower-menu {
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    right: 100px;
+  }
+  .flower-menu {
+    width: 65px;
+    height: 65px;
+    top: 450px;
+    left: 200px;
+  }
+  .randomflower-menu {
+    width: 70px;
+    height: 70px;
+    top: 400px;
+    right: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    max-width: 100%;
+  }
+  .banner {
+    max-width: 100%;
+    background-image: url("./assets/images/banner.png");
+    min-height: 40rem;
+  }
+  .vidcats {
+    max-width: 100%;
+    min-height: 400px;
+    padding: 0;
+    margin: 0;
+    top: 0rem;
+  }
+  video {
+    max-width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .banner > img {
+    max-width: 50%;
+    margin-top: -8rem;
+  }
+  .en_ligne::before {
+    margin-left: -50em;
+    margin-top: -10em;
+  }
+  .en_ligne::after {
+    margin-right: -50em;
+    margin-top: -10em;
+  }
+  .en_dessous p {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  .sidenav a {
+    padding: 80px 0 0 0;
+    color: black;
+    line-height: 23px;
+    font-size: 40px;
+  }
+  .pied-menu a {
+    margin: 40px auto 0 auto;
+    color: black;
+    font-size: 15px;
+  }
+  .orenjiiro-menu {
+    width: 85px;
+    height: 85px;
+    margin-left: 5rem;
+    margin-top: -20rem;
+  }
+  .kawaneko-menu {
+    width: 90px;
+    height: 90px;
+    margin-left: -10rem;
+    margin-top: 0rem;
+  }
+  .jaakuna-menu {
+    width: 90px;
+    height: 90px;
+    right: -200px;
+    margin-top: -5rem;
+  }
+  .hibiscus-menu {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -200px;
+  }
+  .sunflower-menu {
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    right: 100px;
+  }
+  .flower-menu {
+    width: 65px;
+    height: 65px;
+    top: 450px;
+    left: 200px;
+  }
+  .randomflower-menu {
+    width: 70px;
+    height: 70px;
+    top: 400px;
+    right: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    max-width: 100%;
+  }
+  .banner {
+    max-width: 100%;
+    background-image: url("./assets/images/banner.png");
+    min-height: 32rem;
+  }
+  .vidcats {
+    max-width: 100%;
+    min-height: 400px;
+    padding: 0;
+    margin: 0;
+    top: -1rem;
+  }
+  video {
+    max-width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .banner > img {
+    max-width: 50%;
+    margin-top: -10rem;
+  }
+  .en_ligne::before {
+    margin-left: -30em;
+    margin-top: -10em;
+  }
+  .en_ligne::after {
+    margin-right: -30em;
+    margin-top: -10em;
+  }
+  .en_dessous p {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 20px;
+  }
+  .en_dessous {
+    max-width: 100%;
+    height: auto;
+  }
+  .en_ligne img {
+    margin-top: 10px;
+    max-width: 40%;
+  }
+  .sidenav a {
+    padding: 80px 0 0 0;
+    color: black;
+    line-height: 23px;
+    font-size: 35px;
+  }
+  .pied-menu a {
+    margin: 40px auto 0 auto;
+    color: black;
+    font-size: 15px;
+  }
+  .orenjiiro-menu {
+    width: 85px;
+    height: 85px;
+    margin-left: 5rem;
+    margin-top: -20rem;
+  }
+  .kawaneko-menu {
+    width: 90px;
+    height: 90px;
+    margin-left: -10rem;
+    margin-top: 0rem;
+  }
+  .jaakuna-menu {
+    width: 80px;
+    height: 80px;
+    margin-left: -200rem;
+  }
+  .hibiscus-menu {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -200px;
+  }
+  .sunflower-menu {
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    right: 100px;
+  }
+  .flower-menu {
+    width: 65px;
+    height: 65px;
+    top: 450px;
+    left: 200px;
+  }
+  .randomflower-menu {
+    width: 70px;
+    height: 70px;
+    top: 400px;
+    right: 0px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    max-width: 100%;
+  }
+  .banner {
+    max-width: 100%;
+    height: auto;
+    display: flex !important;
+    justify-content: center;
+    background-image: url("../images/banner.png");
+    contain: content;
+    min-height: 30rem;
+  }
+  .vidcats {
+    display: none;
+    width: 0;
+    height: auto;
+  }
+  video {
+    max-width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .banner > img {
+    max-width: 50%;
+    margin-top: -5rem;
+  }
+  .titre {
+    font-size: 18px;
+  }
+  .titre a:hover {
+    font-size: 18.5px;
+  }
+  .burger-icon span {
+    width: 30px;
+    height: 3px;
+    margin: 4px 0;
+  }
+  .titre_interactif {
+    margin-top: 4rem;
+  }
+  .story #place h3 {
+    font-size: 2rem;
+    margin-top: -10rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .story #place > div p {
+    padding-top: 5rem;
+    padding-left: 11rem;
+    min-width: 30rem;
+  }
+  #studio h2 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .en_ligne::before {
+    margin-left: -15em;
+    margin-top: -13em;
+  }
+  .en_ligne::after {
+    margin-right: -22em;
+    margin-top: -13em;
+  }
+  .en_dessous p {
+    max-width: 100%;
+    height: 85px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  .en_dessous {
+    max-width: 100%;
+    height: auto;
+  }
+  .en_ligne img {
+    margin-top: 10px;
+    max-width: 30%;
+  }
+  .sidenav a {
+    padding: 90px 0 0 0;
+    color: black;
+    line-height: 23px;
+    font-size: 30px;
+  }
+  .pied-menu a {
+    margin: 30px auto 0 auto;
+    color: black;
+    font-size: 10px;
+  }
+  .orenjiiro-menu {
+    width: 70px;
+    height: 70px;
+    bottom: 50px;
+    left: -100px;
+  }
+  .kawaneko-menu {
+    width: 70px;
+    height: 70px;
+    margin-left: -10rem;
+    margin-top: 0rem;
+  }
+  .jaakuna-menu {
+    width: 70px;
+    height: 70px;
+    top: 450px;
+    margin-left: 200px;
+  }
+  .hibiscus-menu {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -200px;
+  }
+  .sunflower-menu {
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    right: 100px;
+  }
+  .flower-menu {
+    width: 65px;
+    height: 65px;
+    top: 450px;
+    left: 200px;
+  }
+  .randomflower-menu {
+    width: 70px;
+    height: 70px;
+    top: 400px;
+    right: 0px;
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */

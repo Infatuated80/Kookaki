@@ -1,0 +1,73 @@
+// CSS pour la nomination 
+#oscar {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    margin: 12em auto 5em auto;
+}
+
+.en_ligne {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.en_ligne img {
+    margin-top: 30px;
+}
+
+.en_dessous {
+    background-image: url("../images/orange_flou_large.png");
+    width: 50%;
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    padding: 0rem 4.2rem 0em 4.2rem;
+}
+
+.en_dessous p {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.625rem;
+    line-height: 52.5px;
+    color: #FFF5E9;
+    text-align: left;
+}
+
+.site-footer::before {
+    opacity: 0;
+}
+
+.site-footer::after {
+    opacity: 0;
+}
+
+.en_ligne::before {
+    content: url(../images/Sunflower.png);
+    margin:0;
+    padding:0;
+    position: absolute;
+    z-index: 4;
+    margin-left: -73em;
+    margin-top: -7em;
+    animation: rotating 10s linear infinite;
+    transform-origin: center center;
+}
+
+.en_ligne::after {
+    content: url(../images/orchid.png);
+    margin:0;
+    padding:0;
+    position: absolute;
+    z-index: 3;
+    margin-right: -90em;
+    margin-top: -7em;
+    transform-origin: center center;
+    animation: rotating 10s linear infinite;
+}

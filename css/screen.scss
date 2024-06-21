@@ -1,0 +1,506 @@
+/* gestion du responsive */
+
+@media screen and (max-width: 1250px) {
+    
+    body {
+        max-width: 100%;
+    }
+    
+    .banner {
+        max-width: 100%;
+        background-image: url("./assets/images/banner.png");
+        min-height: 50rem;
+    }
+
+    .vidcats {
+        max-width: 100%;
+        min-height: 200px;
+        padding: 0;
+        margin:0;
+        top: 0rem;
+      }
+
+      video {
+        max-width:auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .banner>img {
+     max-width: 50%;
+     margin-top: -20rem;
+    }
+
+    .en_ligne::before {
+        margin-left: -65em;
+        margin-top: -7em;
+    }
+
+    .en_ligne::after {
+        margin-right: -69em;
+        margin-top: -7em;
+    }
+
+    .en_dessous p {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .sidenav a {
+        padding: 88px 0 0 0;
+        color: black;    
+        line-height: 23px;
+        font-size: 50px;
+    }
+
+    .pied-menu a {
+        margin: 40px auto 0 auto;
+        color: black;
+        font-size: 15px;
+    }
+
+    .orenjiiro-menu {
+        width: 90px;
+        height: 90px;
+        margin-left: 5rem;
+        margin-top: -20rem; 
+    }
+
+    .kawaneko-menu {
+        width: 100px;
+        height: 100px;
+        margin-left: 0rem;
+        margin-top: 0rem; 
+    }
+
+    .jaakuna-menu {
+        width: 100px;
+        height: 100px;
+        margin-left: 0rem;
+        margin-top: -5rem; 
+    }
+
+    .hibiscus-menu {
+        width: 400px;
+        height: 400px;
+        bottom: -200px;
+        right: -200px;
+    }
+
+    .sunflower-menu {
+        width: 150px;
+        height: 150px;
+        top: 80px;
+        right: 100px;
+    }
+
+    .flower-menu {
+        width: 65px;
+        height: 65px;
+        top: 450px;
+        left: 200px;
+    }
+
+    .randomflower-menu {
+        width: 70px;
+        height: 70px;
+        top: 400px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+   
+    body {
+        max-width: 100%;
+    }
+    .banner {
+        max-width: 100%;
+        background-image: url("./assets/images/banner.png");
+        min-height: 40rem;
+    }
+
+    .vidcats {
+        max-width: 100%;
+        min-height: 400px;
+        padding: 0;
+        margin:0;
+        top: 0rem;
+      }
+
+      video {
+        max-width:auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .banner>img {
+     max-width: 50%;
+     margin-top: -8rem;
+    }
+
+    .en_ligne::before {
+        margin-left: -50em;
+        margin-top: -10em;
+    }
+
+    .en_ligne::after {
+        margin-right: -50em;
+        margin-top: -10em;
+    }
+
+    .en_dessous p {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+    .sidenav a {
+        padding: 80px 0 0 0;
+        color: black;    
+        line-height: 23px;
+        font-size: 40px;
+    }
+
+    .pied-menu a {
+        margin: 40px auto 0 auto;
+        color: black;
+        font-size: 15px;
+    }
+
+    .orenjiiro-menu {
+        width: 85px;
+        height: 85px;
+        margin-left: 5rem;
+        margin-top: -20rem; 
+    }
+
+    .kawaneko-menu {
+        width: 90px;
+        height: 90px;
+        margin-left: -10rem;
+        margin-top: 0rem; 
+    }
+
+    .jaakuna-menu {
+        width: 90px;
+        height: 90px;
+        right: -200px;
+        margin-top: -5rem; 
+    }
+
+    .hibiscus-menu {
+        width: 400px;
+        height: 400px;
+        bottom: -200px;
+        right: -200px;
+    }
+
+    .sunflower-menu {
+        width: 150px;
+        height: 150px;
+        top: 80px;
+        right: 100px;
+    }
+
+    .flower-menu {
+        width: 65px;
+        height: 65px;
+        top: 450px;
+        left: 200px;
+    }
+
+    .randomflower-menu {
+        width: 70px;
+        height: 70px;
+        top: 400px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        max-width: 100%;
+    }
+
+    .banner {
+        max-width: 100%;
+        background-image: url("./assets/images/banner.png");
+        min-height: 32rem;
+    }
+
+    .vidcats {
+        max-width: 100%;
+        min-height: 400px;
+        padding: 0;
+        margin:0;
+        top: -1rem;
+      }
+
+      video {
+        max-width:auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .banner>img {
+        max-width: 50%;
+        margin-top: -10rem;
+    }
+
+    .en_ligne::before {
+        margin-left: -30em;
+        margin-top: -10em;
+    }
+
+    .en_ligne::after {
+        margin-right: -30em;
+        margin-top: -10em;
+    }
+
+    .en_dessous p {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.2rem;
+        line-height: 20px;
+    }
+
+    .en_dessous {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .en_ligne img {
+        margin-top: 10px;
+        max-width: 40%;
+    }
+
+    .sidenav a {
+        padding: 80px 0 0 0;
+        color: black;    
+        line-height: 23px;
+        font-size: 35px;
+    }
+
+    .pied-menu a {
+        margin: 40px auto 0 auto;
+        color: black;
+        font-size: 15px;
+    }
+
+    .orenjiiro-menu {
+        width: 85px;
+        height: 85px;
+        margin-left: 5rem;
+        margin-top: -20rem; 
+    }
+
+    .kawaneko-menu {
+        width: 90px;
+        height: 90px;
+        margin-left: -10rem;
+        margin-top: 0rem; 
+    }
+
+    .jaakuna-menu {
+        width: 80px;
+        height: 80px;
+        margin-left: -200rem;
+    }
+
+    .hibiscus-menu {
+        width: 400px;
+        height: 400px;
+        bottom: -200px;
+        right: -200px;
+    }
+
+    .sunflower-menu {
+        width: 150px;
+        height: 150px;
+        top: 80px;
+        right: 100px;
+    }
+
+    .flower-menu {
+        width: 65px;
+        height: 65px;
+        top: 450px;
+        left: 200px;
+    }
+
+    .randomflower-menu {
+        width: 70px;
+        height: 70px;
+        top: 400px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        max-width: 100%;
+    }
+
+    .banner {
+        max-width: 100%;
+        height: auto;
+        display: flex!important;
+        justify-content: center;
+        background-image: url("../images/banner.png");
+        contain: content;
+        min-height: 30rem;
+    }
+
+    .vidcats {
+        display:none;
+        width: 0;
+        height: auto;
+      }
+
+      video {
+        max-width:auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .banner>img {
+        max-width: 50%;
+        margin-top: -5rem;
+    }
+
+    .titre{
+        font-size: 18px;;
+    }
+
+    .titre a:hover {
+        font-size: 18.5px;
+    }
+
+    .burger-icon span {
+        width: 30px;
+        height: 3px;
+        margin: 4px 0;
+    }
+
+    .titre_interactif {
+        margin-top: 4rem;
+}
+
+.story #place h3 {
+    font-size: 2rem;
+    margin-top: -10rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .story #place > div p {
+    padding-top: 5rem;
+    padding-left: 11rem;
+    min-width: 30rem;
+  } 
+
+  #studio h2 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .en_ligne::before {
+    margin-left: -15em;
+    margin-top: -13em;
+}
+
+.en_ligne::after {
+    margin-right: -22em;
+    margin-top: -13em;
+}
+
+.en_dessous p {
+    max-width: 100%;
+    height: 85px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+.en_dessous {
+    max-width: 100%;
+    height: auto;
+}
+
+.en_ligne img {
+    margin-top: 10px;
+    max-width: 30%;
+}
+
+.sidenav a {
+    padding: 90px 0 0 0;
+    color: black;    
+    line-height: 23px;
+    font-size: 30px;
+}
+
+.pied-menu a {
+    margin: 30px auto 0 auto;
+    color: black;
+    font-size: 10px;
+}
+
+.orenjiiro-menu {
+    width: 70px;
+    height: 70px;
+    bottom: 50px;
+    left: -100px;
+}
+
+.kawaneko-menu {
+    width: 70px;
+    height: 70px;
+    margin-left: -10rem;
+    margin-top: 0rem; 
+}
+
+.jaakuna-menu {
+    width: 70px;
+    height: 70px;
+    top: 450px;
+    margin-left: 200px;
+}
+
+.hibiscus-menu {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -200px;
+}
+
+.sunflower-menu {
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    right: 100px;
+}
+
+.flower-menu {
+    width: 65px;
+    height: 65px;
+    top: 450px;
+    left: 200px;
+}
+
+.randomflower-menu {
+    width: 70px;
+    height: 70px;
+    top: 400px;
+    right: 0px;
+}
+}
